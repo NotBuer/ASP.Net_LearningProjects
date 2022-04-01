@@ -26,5 +26,10 @@ namespace ASP.NET_Learning.Controllers
             return View("Register");
         }
 
+        public ActionResult UserHome()
+        {
+            return View("UserHome");
+        }
+
     }
 }

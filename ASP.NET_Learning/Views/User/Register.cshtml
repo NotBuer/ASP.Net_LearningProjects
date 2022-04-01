@@ -5,5 +5,79 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Register</h2>
+<head>
+    <title>@ViewBag.Title - Registro de Usuario</title>
+    @Styles.Render("~/Content/CustomStyle/RegisterStyle.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<div id="div-form">
+    @using (Html.BeginForm("UserHome", "User", FormMethod.Post))
+    {
+
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <!--TITLE-->
+        <div id="title" class="div-margin font">Register Form</div>
+
+        <!--NAME-->
+        <div id="name" class="div-margin ">
+            @Html.LabelFor(User => User.Name, new { htmlAttributes = new { @class = "font" } })
+            @Html.EditorFor(User => User.Name, new { htmlAttributes = new { @class = "textbox-style" } })
+            @Html.ValidationMessageFor(User => User.Name, "", new { @class = "text-danger" })
+            @*<label class="font" for="name">Name:</label>
+                <input type="text" name="name" class="textbox-style" />*@
+        </div>
+
+        <!--AGE-->
+        <div id="age" class="div-margin">
+            @Html.LabelFor(User => User.Age, new { htmlAttributes = new { @class = "font" } })
+            @Html.EditorFor(User => User.Age, new { htmlAttributes = new { @class = "textbox-style" } })
+            @Html.ValidationMessageFor(User => User.Age, "", new { @class = "text-danger" })
+            @*<label class="font" for="age">Age:</label>
+                <input type="number" name="age" class="textbox-style" />*@
+        </div>
+
+        <!--CPF-->
+        <div id="cpf" class="div-margin">
+            @Html.LabelFor(User => User.CPF, new { htmlAttributes = new { @class = "font" } })
+            @Html.EditorFor(User => User.CPF, new { htmlAttributes = new { @class = "textbox-style" } })
+            @Html.ValidationMessageFor(User => User.CPF, "", new { @class = "text-danger" })
+            @*<label class="font" for="cpf">Cpf:</label>
+                <input type="number" name="cpf" class="textbox-style" />*@
+        </div>
+
+        <!--PASSWORD-->
+        <div id="password" class="div-margin">
+            @Html.LabelFor(User => User.Password, new { htmlAttributes = new { @class = "font" } })
+            @Html.EditorFor(User => User.Password, new { htmlAttributes = new { @class = "textbox-style" } })
+            @Html.ValidationMessageFor(User => User.Password, "", new { @class = "text-danger" })
+            @*<label class="font" for="password">Password:</label>
+                <input type="password" name="password" class="textbox-style" />*@
+        </div>
+
+        <!--CONFIRM PASSWORD-->
+        <div id="confirm-password" class="div-margin">
+            @Html.LabelFor(User => User.Password, new { htmlAttributes = new { @class = "font" } })
+            @Html.EditorFor(User => User.Password, new { htmlAttributes = new { @class = "textbox-style" } })
+            @Html.ValidationMessageFor(User => User.Password, "", new { @class = "text-danger" })
+            @*<label class="font" for="confirm-password">Confirm Password:</label>
+                <input type="password" name="confirm-password" class="textbox-style" />*@
+        </div>
+
+        <!--REGISTER BTN-->
+        <div id="register-btn" class="div-margin">
+            <input type="submit" name="submit" class="textbox-style font btns" value="Register" />
+        </div>
+
+        <!--CLEAR-->
+        <div id="clear-form" class="div-margin">
+            <input type="reset" name="clear" id="clear-btn" class="textbox-style font btns" value="Clear" />
+        </div>
+
+    }
+
+</div>
 

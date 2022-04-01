@@ -5,5 +5,34 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Login</h2>
+<head>
+    <title>@ViewBag.Title - Registro de Usuario</title>
+    @Styles.Render("~/Content/CustomStyle/LoginStyle.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<div id="div-form">
+    @using (Html.BeginForm("UserHome", "User", FormMethod.Post))
+    {
+        <!--TITLE-->
+        <div id="title" class="div-margin font">Login</div>
+
+        <!--CPF-->
+        <div id="cpf" class="div-margin">
+            <label class="font" for="cpf">Cpf:</label>
+            <input type="number" name="cpf" class="textbox-style" />
+        </div>
+
+        <!--PASSWORD-->
+        <div id="password" class="div-margin">
+            <label class="font" for="password">Password:</label>
+            <input type="password" name="password" class="textbox-style" />
+        </div>
+
+        <!--REGISTER BTN-->
+        <div id="register-btn" class="div-margin">
+            <input type="submit" name="submit" class="textbox-style font btns" value="Login" />
+        </div>
+    }
+</div>
 
