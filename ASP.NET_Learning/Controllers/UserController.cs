@@ -13,16 +13,17 @@ namespace ASP.NET_Learning.Controllers
 
         public ActionResult Index()
         {
-            return View("User");
+            return View("Index");
         }
 
-        public ActionResult UserLogin(UserModel user)
+        public ActionResult Login()
         {
-            SecurityServices securityServices = new SecurityServices();
-            bool success = securityServices.Authenticate(user);
+            return View("Login");
+        }
 
-            // Redirect the user if login was successful or not.
-            return View("NoPage_FixHere!");
+        public ActionResult Register()
+        {
+            return View("Register");
         }
 
     }

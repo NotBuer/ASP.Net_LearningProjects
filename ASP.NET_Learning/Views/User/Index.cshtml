@@ -1,0 +1,20 @@
+﻿@model ASP.NET_Learning.Models.UserModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Login", "User", FormMethod.Post))
+{
+    <input type="submit" value="Login Page" />
+}
+
+<br>
+
+@using (Html.BeginForm("Register", "User", FormMethod.Post))
+{
+    <input type="submit" value="Register Page" />
+}

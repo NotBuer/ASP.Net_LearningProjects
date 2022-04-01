@@ -13,5 +13,21 @@ namespace ASP.NET_Learning.Models
         public long CPF { get; set; }
         public string Password { get; set; }
 
+        public UserModel(string name, int age, long _CPF, string password)
+        {
+            Name = name;
+            Age = age;
+            CPF = _CPF;
+            Password = password;
+        }
+
+        public UserModel()
+        {
+            Name = "NoName";
+            Age = 0;
+            CPF = 0;
+            Password = "NoPassword";
+        }
+
     }
 }
