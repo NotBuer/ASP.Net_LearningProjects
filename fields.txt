@@ -1,0 +1,10 @@
+*Input
+-Nome (NVARCHAR)
+-Idade (INT)
+-CPF (INT)
+-Senha (NVARCHAR)
+-Senha confirmacao (NVARCHAR)
+
+*Cadastro BTN
+*Clear
+
