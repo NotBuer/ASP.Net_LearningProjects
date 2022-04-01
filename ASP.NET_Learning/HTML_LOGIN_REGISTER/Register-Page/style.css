@@ -1,0 +1,85 @@
+/* font-family: 'Bebas Neue';*/
+body{
+    /*background:url(wallp.jpg);*/
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+}
+
+input[type="text"]
+{
+    font-size:24px;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    border-style: double;
+}
+
+input[type="password"]
+{
+    font-size:24px;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    border-style: double;
+}
+
+input[type="number"]
+{
+    font-size:24px;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    border-style: double;
+}
+
+#title{
+ font-size: 40px;
+}
+
+.div-margin{
+    margin-bottom: 20px;
+}
+
+.font{
+    font-size: 35px;    
+    font-family: 'Bebas Neue';
+    color:rgb(0, 0, 0);
+}
+
+.textbox-style{
+    width: 500px;
+    height: 30px;
+    font-size: 100%;
+    display:block;
+    font-family: 'Bebas Neue';
+}
+
+#div-form{
+    background-color: rgba(116, 116, 116, 0.185);
+    width: 600px;
+    height: 800px;
+    margin:auto ;   
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly
+}
+
+#title{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#name{
+    display: inline-block;
+}
+
+.btns{
+    height: 50px;
+    font-size:30px;
+    cursor: pointer;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+}
+
+#clear-btn{
+    background-color: rgb(236, 77, 77);
+}
