@@ -12,22 +12,28 @@
 </head>
 
 <div id="div-form">
-    @using (Html.BeginForm("UserHome", "User", FormMethod.Post))
+@using (Html.BeginForm("LoginProcess", "User", FormMethod.Post))
     {
         <!--TITLE-->
         <div id="title" class="div-margin font">Login</div>
 
         <!--CPF-->
-        <div id="cpf" class="div-margin">
-            <label class="font" for="cpf">Cpf:</label>
-            <input type="number" name="cpf" class="textbox-style" />
-        </div>
+<div id="cpf" class="div-margin">
+    @Html.LabelFor(User => User.CPF, new { htmlAttributes = new { @class = "font" } })
+    @Html.EditorFor(User => User.CPF, new { htmlAttributes = new { @class = "textbox-style" } })
+    @Html.ValidationMessageFor(User => User.CPF, "", new { @class = "text-danger" })
+    @*<label class="font" for="cpf">Cpf:</label>
+        <input type="number" name="cpf" class="textbox-style" />*@
+</div>
 
         <!--PASSWORD-->
-        <div id="password" class="div-margin">
-            <label class="font" for="password">Password:</label>
-            <input type="password" name="password" class="textbox-style" />
-        </div>
+<div id="password" class="div-margin">
+    @Html.LabelFor(User => User.Password, new { htmlAttributes = new { @class = "font" } })
+    @Html.EditorFor(User => User.Password, new { htmlAttributes = new { @class = "textbox-style" } })
+    @Html.ValidationMessageFor(User => User.Password, "", new { @class = "text-danger" })
+    @*<label class="font" for="password">Password:</label>
+        <input type="password" name="password" class="textbox-style" />*@
+</div>
 
         <!--REGISTER BTN-->
         <div id="register-btn" class="div-margin">
